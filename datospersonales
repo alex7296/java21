@@ -1,0 +1,12 @@
+public class datospersonales {
+    public static void main(String args[]) {
+      String nombre="Manuel Ortiz";
+      int edad=20;
+      double  sueldo=500.00;
+      
+      System.out.println("nombre del empleado " + nombre);
+      System.out.println("Edad");
+      System.out.println(edad);
+      System.out.println("Sueldo" + sueldo);
+    }
+}
