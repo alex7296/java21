@@ -1,0 +1,9 @@
+public class ArrayLoop {
+ public static void main ( String[] args )
+ { 
+int[] a = {3, 4, 7, 9}; 
+for (int x : a) { 
+System.out.println(x);
+ } 
+}
+}
