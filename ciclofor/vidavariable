@@ -1,0 +1,12 @@
+// Ejemplo del tiempo de vida de una variable.
+public class Duracion {
+public static void main(String args[]) {
+int x;
+for(x = 0; x < 3; x++) {
+int y = -1; // y se inicializa cada vez que se entra en el bloque
+System.out.println("y es: " + y); // siempre se imprime -1
+y = 100;
+System.out.println("y es ahora: " + y);
+}
+}
+}
