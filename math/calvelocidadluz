@@ -1,0 +1,17 @@
+// Cálculo de la distancia que recorre la luz usando variables long
+public class Luz {
+public static void main (String args[]){
+int velocidad;
+int dias;
+int segundos;
+long distancia;
+//velocidad aproximada de la luz en millas por segundo
+velocidad = 186000;
+dias = 1000; //aquí se especifica el número de días
+segundos = dias * 24 * 60 * 60; // conversión a segundos
+distancia = velocidad * segundos; // cálculo de la distancia
+System.out.print ( "En " + dias);
+System.out.print ( " días la luz recorrerá aproximadamente ");
+System.out.print ( distancia + " millas");
+}
+}
