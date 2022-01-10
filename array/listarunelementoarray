@@ -1,0 +1,6 @@
+public class AndroidArray { 
+public static void main ( String[] args ) { 
+int[ ] a= { 3, 34, 7, 9}; 
+System.out.println(a[2]);
+ }
+ }
