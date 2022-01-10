@@ -1,0 +1,10 @@
+// Cálculo del área de un círculo.
+public class Area {
+public static void main(String args[]) {
+double pi, r, a;
+r = 10.8; // radio del círculo
+pi = 3.1416; // valor aproximado de pi
+a = pi * r * r; // cálculo del área
+System.out.println("El área del círculo es " + a);
+}
+}
