@@ -1,0 +1,7 @@
+// arreglo unimensional
+class AutoArreglo {
+public static void main(String args[]) {
+int dias_del_mes [] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+System.out.println("Abril tiene " + dias_del_mes [3] +" dias.");
+}
+}
