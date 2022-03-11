@@ -1,0 +1,37 @@
+public class Ejemplo22 {
+public static void main(String argv[]) {
+Sumador A = new Sumador(); // un unico sumador
+Contador C1 = new Contador(A); // dos threads que lo usan...
+Contador C2 = new Contador(A); // ...para sumar
+C1.start();
+C2.start();
+try {
+C1.join();
+C2.join();
+}
+catch (Exception e) {
+System.out.println(e);
+}
+}
+}
+class Contador extends Thread {
+Sumador s;
+Contador (Sumador sumador) {
+s = sumador; // le asigno un sumador a usar
+}
+public void run() {
+s.sumar(); // ejecuto la suma
+}
+}
+class Sumador {
+int a = 0;
+public void sumar() {
+for (int i=0; i<10000; i++ ) {
+if ( (i % 5000) == 0 ) { // "%" da el resto de la division:
+System.out.println(a); // imprimo cada 5000
+}
+a += 1;
+}
+System.out.println(a); // imprimo el final
+}
+}
