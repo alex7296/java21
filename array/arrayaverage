@@ -1,0 +1,12 @@
+class arrayaverage {
+    public static void main(String[] args) {
+        double grades[] = {88, 99, 73, 56, 87, 64};
+double sum, average;
+sum = 0;
+for (int loop_index = 0; loop_index < grades.length; loop_index++) {
+sum += grades[loop_index];
+}
+average = sum / grades.length;
+System.out.println(average);
+    }
+}
