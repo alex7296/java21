@@ -1,0 +1,60 @@
+public class Ejemplo23 {
+public static void main(String argv[]) {
+Saludo hola = new Saludo();
+Personal pablo = new Personal(hola, "Pablo", false);
+Personal luis = new Personal(hola, "Luis", false);
+Personal andrea = new Personal(hola, "Andrea", false);
+Personal pedro = new Personal(hola, "Pedro", false);
+Personal jefe = new Personal(hola, "JEFE", true);
+pablo.start();
+luis.start();
+andrea.start();
+pedro.start();
+jefe.start();
+try {
+pablo.join();
+luis.join();
+andrea.join();
+pedro.join();
+jefe.join();
+}
+catch (Exception e) {
+System.out.println(e);
+}
+}
+}
+
+class Saludo {
+synchronized void esperarJefe(String empleado) {
+try {
+wait();
+System.out.println(empleado+"> Buenos dias jefe!");
+}
+catch (InterruptedException e) {
+System.out.println(e.toString());
+}
+}
+synchronized void saludoJefe() {
+System.out.println("JEFE> Buenos dias!");
+notifyAll();
+}
+}
+class Personal extends Thread {
+String nombre;
+Saludo saludo;
+boolean esJefe;
+
+Personal (Saludo s, String n, boolean j) {
+nombre = n;
+saludo = s;
+esJefe = j;
+}
+public void run() {
+System.out.println("("+nombre+" llega)");
+if (esJefe)
+saludo.saludoJefe();
+else
+saludo.esperarJefe(nombre);
+}
+}
+
