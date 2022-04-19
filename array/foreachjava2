@@ -1,0 +1,14 @@
+class foreach {
+    public static void main(String[] args) {
+        
+int sum = 0;
+int nums[] = { 1,2,3,4,5,6,7,8,9,10 };
+// Se utiliza el ciclo estilo for-each para mostrar y sumar los valores
+for(int x : nums) {
+System.out.println ("El valor es: " + x);
+sum += x;
+if(x == 5) break; // detener el ciclo en el quinto elemento del arreglo
+}
+System.out.println("La suma de los cinco primeros valores es: " + sum);
+}
+}
