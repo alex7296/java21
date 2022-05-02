@@ -1,0 +1,14 @@
+// Uso del break con ciclos anidados.
+class BreakLoop3 {
+public static void main (String args[]) {
+for (int i=0; i<3; i++) {
+System.out.print ("Paso " + i + ": ");
+for (int j=0; j<l00; j++) {
+if (j == 10) break; // el ciclo finaliza si i es igual a 10
+System.out.print (j + " ");
+}
+System.out.println ();
+}
+System.out.println ("Ciclo completado.");
+}
+}
