@@ -1,0 +1,11 @@
+class HelloWorld {
+    public static void main(String[] args) {
+        // Ejemplo de ciclos anidados.
+int i, j;
+for(i=0; i<10; i++) {
+for(j=i; j<10; j++)
+System.out.print (".");
+System.out.println ();
+}
+}
+}
