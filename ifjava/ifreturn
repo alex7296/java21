@@ -1,0 +1,10 @@
+class HelloWorld {
+    public static void main(String[] args) {
+        // Ejemplo de la sentencia return.
+
+boolean t = true;
+System.out.println ("Antes de return.");
+if (t) return; // vuelve al mtodo llamante
+System.out.println ("Esto no se ejecutara.");
+}
+}
