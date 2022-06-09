@@ -1,0 +1,25 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class HelloWorld {
+    public static void main(String[] args) {
+ {
+ double monto; // Monto depositado al final de cada ano
+ double principal = 1000.0; // monto inicial antes de los intereses
+ double tasa = 0.05; // tasa de interes
+
+ // muestra los encabezados
+ System.out.printf( "s%20s\n", "Anio", "Monto en deposito" );
+
+ // calcula el monto en deposito para cada uno de diez anos
+ for ( int anio = 1; anio <= 10; anio++ )
+ {
+ // calcula el nuevo monto para el ano especificado
+ monto = principal * Math.pow( 1.0 + tasa, anio );
+
+ // muestra el ano y el monto
+ System.out.printf( "%4d%,20.2f\n", anio, monto );
+ } // fin de for
+ } // fin de main
+ } // fin de la clase Interes
+}
