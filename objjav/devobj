@@ -1,0 +1,23 @@
+// Devolucion de un objeto.
+class Test {
+int a;
+Test(int i) {
+a = i;
+}
+Test increnDiez() {
+Test temp = new Test(a+10);
+return temp;
+}
+}
+class RetOb {
+public static void main(String args[]) {
+Test obl = new Test(2);
+Test ob2;
+ob2 = obl. increnDiez ();
+System.out.println("obl.a: " + obl.a);
+System.out.println("ob2.a: " + ob2.a);
+ob2 = ob2.increnDiez();
+System.out.println("ob2.a despues del segundo incremento: "
++ ob2.a);
+}
+}
