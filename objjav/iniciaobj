@@ -1,0 +1,57 @@
+// Este ejemplo muestra como un objeto se utiliza para inicializar a otro.
+class Caja {
+double ancho;
+double alto;
+double largo;
+// Observe que este constructor recibe como parametro un objeto de tipo Caja
+Caja(Caja ob) { // se pasa el objeto al constructor
+ancho = ob.ancho;
+alto = ob.alto;
+largo = ob.largo;
+}
+// constructor que se utiliza cuando se especifican todas las dimensiones
+Caja(double w, double h, double d) {
+ancho = w;
+alto = h;
+largo = d;
+}
+// constructor que se utiliza cuando no se especifican dimensiones
+Caja () {
+ancho = -1; // usa -1 para indicar
+alto = -1; // una caja que no ha sido
+largo = -1; // inicializada
+}	
+// constructor que se utiliza para crear un cubo
+Caja(double lado) {
+ancho = alto = largo = lado;
+}
+// calculo y devolucion del volumen
+double volumen() {
+return ancho * alto * largo;
+}
+}
+class OverloadCons2 {
+public static void main(String args[]) {
+// se crean cajas usando los diferentes constructores
+Caja miCaja1 = new Caja(10, 20, 15);
+Caja miCaja2 = new Caja();
+Caja miCubo = new Caja(7);
+Caja miClon = new Caja(miCaja1); // crea una copia del objeto miCaja1
+double vol;
+// se obtiene el volumen de la primera caja
+vol = miCaja1.volumen();
+System.out.println("El volumen de miCaja1 es " + vol);
+// se obtiene el volumen de la segunda caja
+vol = miCaja2.volumen();
+System.out.println("El volumen de miCaja2 es " + vol);
+// se obtiene el volumen del cubo
+vol = miCubo.volumen();
+System.out.println("El volumen del cubo es " + vol);
+// se obtiene el volumen del clon
+vol = miClon.volumen();
+System.out.println("El volume del clon es " + vol);
+}
+}
+
+
+
